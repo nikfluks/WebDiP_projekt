@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="hr">
+    <head>
+        <title>Dokumentacija</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="naslov" content="Dokumentacija">
+        <meta name="kljucne_rijeci" content="FOI,Web DiP">
+        <meta name="datum_izrade" content="07.03.2017.">  
+        <meta name="autor" content="Nikola Fluks">
+        <link rel="stylesheet" media="screen" type="text/css" href="css/nikfluks.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><i>Dokumentacija</i></h1>
+            <figure id="logoSlika">
+                <img src="slike/logo.png" usemap="#mapa1" alt="FOI" width="400" height="200">
+                <map name="mapa1">
+                    <area href="index.php" alt="logo" shape="rect" coords="0,0,200,200" target="index"/>
+                    <area href="#heding2_webinari" alt="logo" shape="rect" coords="200,0,400,200" />
+                </map>
+                <figcaption id="logoCap">Interaktivna slika</figcaption>
+            </figure>
+        </header>
+
+        <section class="omiljeni_proizvodi">
+            <br>
+            <h2 id="heding2_webinari">Webinari</h2>
+            <article>
+                <h2 class="h2_crveno">1. Opis projektnog zadatka</h2>
+                <h3>Obični korisnik</h3>
+                <p class="opis_projekta">
+                    Tema mojeg projekta bili su webinari. Prvo što bi obični korisnik trebao vidjeti kada
+                    dođe na stranicu su kategorije webinara te iz pojedine kategorije 3 najbolje ocjenjena
+                    webinara. Ako korisnik želi imati više mogućnosti, mora se registrirati s time da prilikom
+                    registracije, osim osnovnih osobnih podataka, unosi i želi li prijavu u 2 koraka. Nakon 
+                    što se uspješno registrirao i aktivirao svoj korisnički račun, korisnik se može prijaviti.
+                </p>
+                <h3>Registrirani korisnik</h3>
+                <p class="opis_projekta">
+                    Nakon prijave u sustav može se prijaviti za pristup nekom webinaru koji ga zanima, ako taj webinar 
+                    ima još slobodnih mjesta. Nakon što se upisao u neki webinar, može pregledavati materije iz tih
+                    webinara, ali samo u vremenu kad je webinar dostupan. Također korisnik uz svaki webinar vidi 
+                    njegovu prosječnu ocjenu te on može ocjeniti svaki webinar svojom ocjenom, ali tek kad se 
+                    webinar zatvori. Nadalje korisnik vidi koliko bodova je sakupio za korištenje određenih dijelova
+                    web aplikacije. Svoje sakupljene bodove može trošiti na kupnju kupona (prije toga ih stavlja
+                    u košaricu) te vidi popis aktivnih kupona u obliku galerije slika, ali samo one kupone za koje 
+                    ima dovoljno bodova. Prilikom odabira kupona može vidjeti dokument, sliku i video za taj kupon.
+                    Također korisnik može neke sadržaje share-ati na društvenu mrežu.
+                </p>
+                <h3>Moderator</h3>
+                <p class="opis_projekta">
+                    Za svaki webinar postoji i moderator koji za svoje webinare postavlja video materijale i 
+                    dokumente. On određuje od kad, do kad je webinar dostupan i koliko korisnika maksimalno se može
+                    prijaviti na pojedini webinar. Moderator ima i mogućnost slanja obavijesti svim korisnicima 
+                    (npr. podsjetnik za početak webinara) te može onemogućiti pristup korisniku na neki webinar.
+                    Nakon završetka webinara omogućuje ocjenjivanje istog te također može ponovo aktivirati webinar.
+                    Osim toga moderator bira kupon i definira koliko bodova je potrebno za pojedini kupon za njegovu
+                    kategoriju te određuje od kad i do kad je kupon aktivan. Nadalje, može unijeti kod za kupon kako
+                    bi provjerio postoji li kupon s tim kodom ili je on lažan. Zadnje što moderator može je promjeniti
+                    izgled stranice za one kategorije kojima je moderator.
+                </p>
+                <h3>Administrator</h3>
+                <p class="opis_projekta">
+                    Uloga s najviše mogućonosti je administrator i on je zadužen za kreiranje kategorija webinara i 
+                    dodjeljivanje moderatora za kategorije. Isto tako administrator kreira kupone te im određuje naziv,
+                    pdf dokument s opisom, sliku i video. On vidi i statistike lojalnosti korisnika, npr. broj sakupljenih
+                    ili potrošenih bodova po korisniku ili vrsti akcije. Također može i filtrirati podatke po datumu
+                    i vremenu te sortirati podatke po broju bodova.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="h2_crveno">2. Opis projektnog rješenja</h2>
+                <p class="opis_projekta">
+                    Što se tiče mog projektnog rješenja za ovaj projekt, napravio sam većinu onoga što je trebalo iz
+                    općih uputa o projektu, dok specifične stvari za webinare i nisam baš napravio. Tako sam iz općih
+                    uputa napravio mogućnost registracije korisnika, kod koje se unose osobni podaci, lozinka, potvrda
+                    lozinke, te element želi li prijavu u 2 koraka. Nakon toga se na e-mail šalje aktivacijski link, 
+                    te tek kada korisnik klikne na link (aktivira svoj račun) smatra se registriranim. Također svaki
+                    neregistrirani korisnik mora prihvatiti uvjete korištenje prilikom prve posjete stranici te se to
+                    sprema o cookie koji vrijedi 3 dana. Nakon toga sam za registriranog korisnika napravio prijavu,
+                    koja se sastoji od jednog ili 2 koraka, ovisno o odabiru prilikom registracije. Nakon što se
+                    korisnik uspješno prijavi napravi se korisnička sesija. Također, registriranom korisniku se 
+                    produžuje cookie te sada on vrijedi 30 dana od datum registriranja. Napravio sam i dnevnik rada
+                    kojem pristupa administrator stranice. On može pretraživati dnevnik po stupcu korisnik i radnja
+                    te također može pretražiti po vremenskom razdoblju (datum od-do). Nad tabličnim prikazima sam osim
+                    mogućnosti pretraživanja napravio i straničenje. Kod registracija sam napravio validaciju na 
+                    korisničkoj i poslužiteljskoj strani i osigurao  zaštitu od automata. Također pamtim zadnje 
+                    uspješno prijavljenog korisnika u cookie (njegovo korisničko ime). Lozinke spremam u bazu u 
+                    čitljivom obliku i kriptiranom pomoću SHA1 i soli. Cijeli projekt mi ide preko HTTPS sigurne linije.
+                    Kod većine djelova koje sam napravio koristio sam AJAX tako da se korisniku osvježi informacija
+                    bez potrebe za osvježavanjem cijele stranice. Osim toga u projektu se koristi virtualno vrijeme
+                    koje može postaviti samo administrator. Nadalje, napravio sam direktorij privatno koji je zaštićen
+                    .htaccess i .htpasswd datotekama te se u njemu nalazi skripta korisnici.php koja ispisuje sve
+                    korisnike te neke osnovne podatke o njima. Također sam napravio i mogućnost za administratora da 
+                    kreira konfiguraciju sustava i da blokira/otključa pojedinog korisnika. 
+                </p>
+            </article>
+
+            <article>
+                <h2 class="h2_crveno">3. ERA model</h2>
+                <a href="slike/era.png" target="era">
+                    <figure>
+                        <img src="slike/era.png" alt="ERA" height="300" width="300">
+                        <figcaption>ERA model</figcaption>
+                    </figure> 
+                </a>
+            </article>
+
+            <article>
+                <h2 class="h2_crveno">4. Navigacijski dijagram</h2>
+                <a href="slike/navigacijski.png" target="navi">
+                    <figure>
+                        <img src="slike/navigacijski.png" alt="Navigacijski" height="300" width="300">
+                        <figcaption>Navigacijski dijagram</figcaption>
+                    </figure> 
+                </a>
+                <p class="opis_projekta">
+                    Kod navigacijskog dijagrama bitno je napomenuti da uloga više razine ima pristup do stranice
+                    uloga niže razine. Redoslijed uloga po razini, od više prema nižoj: administrator, moderator,
+                    registrirani korisnik, neregistrirani korisnik.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="h2_crveno">5. Popis i opis skripata</h2>
+                <p class="opis_projekta">
+                    U root direktoriju nalaze se direktoiji css, js, privatno i slike. Osim tih direktorija, tu se
+                    nalaze i php i html skripte. Prvo ću objasniti datoteke u navedenim direktorijima, a onda ostale 
+                    skripte u root direktoriju. 
+                </p>
+                <p class="opis_projekta">
+                    U css direktoriju nalazi se .css datoteka koju sam koristio kako bih dizajnirao svoje stranice.
+                </p>
+                <p class="opis_projekta">
+                    U js direktoriju nalazise .js datoteka u kojoj se nalazi javascript, točnije jQuery, kod kojeg sam 
+                    koristio za provjeru na korisničkoj strani te za osvježavanje prikaza na ekranu bez osvježavanja
+                    stranice (to sam ostvario putem AJAX-a).
+                </p>
+                <p class="opis_projekta">
+                    U direktoriju privatno nalaze se datoteke .htaccess, .htpasswd i korisnici.php. Datoteka .htaccess
+                    štiti direktorij privatno na način da u njoj piše putanja do direktorija privatno te 
+                    ime korisnika koji smije pristupiti tom direktoriju. U datoteci .htpasswd imamo popis korisnika
+                    (u mojem slučaju samo jednog) i njihovih lozinki u kriptiranom obliku te se s tim podacima može 
+                    pristupiti skripti korisnici.php. Skripta korisnici.php nam ispisuje sve korisnike i osnovne 
+                    podatke o njima. 
+                </p>
+                <p class="opis_projekta">
+                    U direktoriju slike nalaze se slike potrebne za izradu projekta.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: ajax_BrojPrijavaOtkljucavanje.php<br>
+                    Pomoću ove skripte dohvaćamo podatke o korisnicima, ali uzimamo u obzir filter "broj prijava" koji je
+                    korisnik unio te na ekran, bez osvježavanja stranice, prikazujemo one korisnike koji zadvoljavaju ovaj filter.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: ajax_EmailOtkljucavanje.php<br>
+                    Pomoću ove skripte dohvaćamo podatke o korisnicima, ali uzimamo u obzir filter "email" koji je
+                    korisnik unio te na ekran, bez osvježavanja stranice, prikazujemo one korisnike koji zadvoljavaju ovaj filter.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: ajax_KorImeDnevnik.php<br>
+                    Pomoću ove skripte dohvaćamo podatke iz dnevnika (log) sustava, ali uzimamo u obzir filter "korisničko ime" koje je
+                    korisnik unio te na ekran, bez osvježavanja stranice, prikazujemo one korisnike koji zadvoljavaju ovaj filter.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: ajax_KorImeKorisnici.php<br>
+                    Pomoću ove skripte dohvaćamo podatke o korisnicama, ali uzimamo u obzir filter "korisničko ime" koje je
+                    korisnik unio te na ekran, bez osvježavanja stranice, prikazujemo one korisnike koji zadvoljavaju ovaj filter.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: ajax_KorImePrijavaReg.php<br>
+                    Pomoću ove skripte dohvaćamo podatke o korisnicama, ali uzimamo u obzir filter "korisničko ime" koje je
+                    korisnik unio te na ekran, bez osvježavanja stranice, prikazujemo one korisnike koji zadvoljavaju ovaj filter.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: ajax_RadnjaDnevnik.php<br>
+                    Pomoću ove skripte dohvaćamo podatke iz dnevnika (log) sustava, ali uzimamo u obzir filter "radnja" koju je
+                    korisnik unio te na ekran, bez osvježavanja stranice, prikazujemo one korisnike koji zadvoljavaju ovaj filter.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: ajax_TipKorisnici.php<br>
+                    Pomoću ove skripte dohvaćamo podatke o korisnicima, ali uzimamo u obzir filter "tip korisnika" koji je
+                    korisnik unio te na ekran, bez osvježavanja stranice, prikazujemo one korisnike koji zadvoljavaju ovaj filter.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: ajax_ZabLozEmail.php<br>
+                    Pomoću ove skripte dohvaćamo podatke o korisnicima, ali uzimamo u obzir filter "email" koji je
+                    korisnik unio te na ekran, bez osvježavanja stranice, prikazujemo one korisnike koji zadvoljavaju ovaj filter.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: aktivacija.php<br>
+                    Pomoću ove skripte aktiviram korisnički račun nakon što se je korisnik registrirao i klikuno na aktivacijski link
+                    koji mu je poslan na e-mail.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: aplikacijkiOkvir.php<br>
+                    Ova skripta, kao što joj i ime kaže, je okvir za ovu aplikaciju, što znači da se u njoj uključuju ostale skripte koje
+                    su potrebne u ostatku projekta, instancira novi objekt za spajanje na bazu te pokreće novu sesiju.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: baza.class.php<br>
+                    Ova skripta sadrži klasu Baza pomoću koje se spajamo na bazu i izvršavamo upite.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: dnevnik.php<br>
+                    Ova skripta ispisuje sve podatke iz dnevnika sustava, omogućuje pretraživanje po stupcima "korisničko ime" i "radnja".
+                    Također omogućuje ptretraživanje po datumu (od-do), sortiranje po svim stupcima i ima ugrađeno straničenje.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: dnevnik_zapis.php<br>
+                    Ova skripta sadrži funkciju dnevnik_zapis pomoću koje bilo koju radnju koja se dogodi u aplikaciji možemo zapisati 
+                    u bazu podataka. 
+                </p>
+                <p class="opis_projekta">
+                    Skripta: dokumentacija.html<br>
+                    Ova skripta (trenutna), kao što i vidimo, sadži osnovnu dokumentaciju o projektu.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: index.php<br>
+                    Ova skripta je početna stranica aplikacije i vodi na ostale stranice.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: konfiguracija.php<br>
+                    Ova skripta nam pokazuje trenutnu konfiguraciju sustava i omogućuje nam promjenu tih podataka prema zahtjevu administratora.
+                    Također, ova skripta je povezana s skriptom virtualno_vrijeme.php pomoću koje se postavlja virtualno vrijeme aplikacije.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: konfiguracija_funkcija.php<br>
+                    Ova skripta ima funkciju dohvatiStupac, koja prima parametar stupac, i prema tom parametru vraća jedan stupac iz tablice
+                    konfiguracija. To nam omogućava da u aplikaciji dohvatimo postavljeno virtualno vrijeme, straničenje i ostale podatke
+                    koji se postavljaju u konfiguraciji.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: o_autoru.html<br>
+                    Ova skripta nam pokazuje osnovne informacije o autoru, njegovu sliku, te popis omiljenih proizvoda autora.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: odjava.php<br>
+                    Ova skripta odjavljuje korisnika iz aplikacije na način da briše njegovu sesiju.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: otkljucavanja_korisnika.php<br>
+                    Ova skripta prikazuje popis svih korisnika s mogućnošću pretraživanja korisnika i sortiranja. Osim toga nudi opciju 
+                    blokiranja i otključavanja korisnika po zahtjevu administratora.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: prijava.php<br>
+                    Pomoću ove skripte korisnik se prijavlje u aplikaciju. Skripta ima obrazac gdje korisnik unese korisničko ime i lozinku te se
+                    prijavi. Ako je odabrao prijavu u 2 koraka, na mail mu se šalje jedinstveni kod te nakon što ga ispravno unese onda je prijavljen
+                    u aplikaciju. Također, omogućena je opcija "zaboravljena lozinka", što znači da korisnik upiše svoj e-mail te mu se zatim
+                    pošalje novo generirana lozinka na taj e-mail. 
+                </p>
+                <p class="opis_projekta">
+                    Skripta: provjera_korisnika.php<br>
+                    Ova skripta ima funkciju dohvatiKorisnikId kojoj se prosljeđuje korisničko ime, a ona nam vrati Id od tog korisnika.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: registracija.php<br>
+                    Skripta sadrži obrazas u kojeg korisnik unosi osnovne informacije o sebi. Svi unešeni podaci se validiraju na korisničkoj i 
+                    poslužiteljskoj strani i ako je sve dobro uneseno, korisnik se zapisuje u bazu. Nakon registracije potrebno je još aktivirati
+                    korisnički račun kako bi se korisnik mogao prijaviti u aplikaciju.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: sesija.class.php<br>
+                    Ova skripta ima klasu Sesija pomoću koje kreiramo sesiju za korisnika prilikom njegove prijave. Isto tako ima nekoliko metoda
+                    za dodavanje podataka u sesiju i dohvaćanje podataka iz sesije te na kraju metoda za brisanje sesije. 
+                </p>
+                <p class="opis_projekta">
+                    Skripta: uvjeti_koristenja.php<br>
+                    Skripta prikazuje tekst u kojem piše da se u aplikaciju koriste kolačići i korisnik mora to prihvatiti kako bi se mogao
+                    dalje koristiti aplikacijom. 
+                </p>
+                <p class="opis_projekta">
+                    Skripta: uvjeti_koristenja_provjera.php<br>
+                    Skripta provjera je li korisnik prihvatio uvjete korištenja. Ako jest to se zapisuje u kolačić i preusmjerava ga se na početnu
+                    stranicu. Ako nije vraća ga se na stranicu gdje mora prihvatiti uvjete korištenja kako bi mogao nastaviti s radom u aplikaciji.
+                </p>
+                <p class="opis_projekta">
+                    Skripta: virtualno_vrijeme.php<br>
+                    U ovoj skripti administrator može postaviti virtualno vrijeme te ga zatim zapisati u bazu podataka. Nakon što se podatak o pomaku
+                    vremena zapiše u bazu podataka, na cijeloj aplikaciji se primjenjuje novo, virtualno vrijeme. 
+                </p>
+                <p class="opis_projekta">
+                    Skripta: zaboravljena_lozinka.php<br>
+                    Skripta sadrži obrazac kod kojeg se upisuje e-mail adresa i provjera se postoji li ta adresa u bazi podataka. Ukoliko adresa postoji,
+                    generira se nova lozinka se šalje na upisanu e-mail adresu.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="h2_crveno">6. Popis i opis korištenih tehnologija i alata</h2>
+                <p class="opis_projekta">
+                    
+                </p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Vrijeme potrebno za rješavanje aktivnog dokumenta: 8h </p>
+            <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fbarka.foi.hr%2FWebDiP%2F2016%2Fzadaca_03%2Fnikfluks%2Findex.html" target="html5">
+                <figure id="html5">
+                    <img src="slike/HTML5.png" alt="HTML5" width="100" height="100">
+                    <figcaption>HTML5 validator</figcaption>
+                </figure>
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fbarka.foi.hr%2FWebDiP%2F2016%2Fzadaca_03%2Fnikfluks%2Fcss%2Fnikfluks.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" target="css3">
+                <figure id="css3">
+                    <img src="slike/CSS3.png" alt="CSS3" width="100" height="100">
+                    <figcaption>CSS3 validator</figcaption>
+                </figure> 
+            </a>
+            <address id="mail"><strong>Kontakt: <a href="mailto:nikfluks@foi.hr">Nikola Fluks</a></strong></address>
+            <p><small>&copy; 2017. N. Fluks </small></p>
+        </footer>
+    </body>
+</html>

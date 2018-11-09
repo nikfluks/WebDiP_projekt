@@ -1,0 +1,5 @@
+AuthUserFile /var/www/webdip.barka.foi.hr/2016_projekti/WebDiP2016x038/privatno/.htpasswd
+AuthName "Prijava za WebDiP2016x038"
+AuthType Basic
+
+require user WebDiP2016x038
